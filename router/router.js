@@ -15,7 +15,7 @@ router.get("/latest/:page",async(req,res)=>{
           res.json({result})
      } catch (error) {
           
-          res.status(500).json({error:"Something went wrong"})
+          res.status(500).json({error:process.env.URL})
      }
 
 
