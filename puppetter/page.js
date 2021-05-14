@@ -8,7 +8,7 @@ let page = async (val,url) => {
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
 
-    await page.goto(url+ "page/" + val,{waitUntil:'domcontentloaded'});
+    await page.goto(url+ "page/" + val,{waitUntil:'load',timeout:0});
     var results = [];
   
     results = results.concat(await extractedEvaluateCall(page));
