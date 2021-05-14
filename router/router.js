@@ -10,14 +10,14 @@ var url=process.env.MOVIEURL
 
 router.get("/latest/:page",async(req,res)=>{
    
-     // try {
+     try {
           var result=await page(req.params.page,url)
           
          return res.json({result})
-     // } catch (error) {
+     } catch (error) {
           
-     //    return  res.status(500).json({error:"Something went wrong"})
-     // }
+        return  res.status(500).json({error:"Something went wrong"})
+     }
 
 
 })
