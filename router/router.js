@@ -43,12 +43,12 @@ router.get("/search/q=:name",async(req,res)=>{
 })
 
 router.post("/movie-description",async(req,res)=>{
-     try {
+     // try {
           var result=await get_details(req.body.link,url)
          return res.json({result})
-     } catch (error) {
-        return  res.status(500).json({error:"Something went wrong"})
-     }
+     // } catch (error) {
+     //    return  res.status(500).json({error:"Something went wrong"})
+     // }
 })
 
 router.post("/download",async(req,res)=>{
