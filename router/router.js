@@ -6,7 +6,7 @@ const latest = require("../puppetter/filmyzilla")
 const page = require("../puppetter/page")
 const search_movie = require("../puppetter/search")
 const router=express.Router()
-var url=process.env.URL
+var url="https://123mkv.kim/"
 
 router.get("/latest/:page",async(req,res)=>{
    
@@ -16,7 +16,7 @@ router.get("/latest/:page",async(req,res)=>{
           res.json({result})
      } catch (error) {
           
-          res.status(500).json({error:url})
+          res.status(500).json({error:"Something went wrong"})
      }
 
 
