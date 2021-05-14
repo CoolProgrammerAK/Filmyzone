@@ -6,7 +6,7 @@ let search_movie = async (val,url) => {
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
 
-    await page.goto(`${url}?s=${val}`,{waitUntil:'load',timeout:0});
+    await page.goto(`${url}?s=${val}`,{waitUntil:'domcontentloaded'});
     var results=[]
     results = results.concat(await extractedEvaluateCall(page));
             browser.close();
