@@ -1,7 +1,7 @@
 const { request } = require("express");
 const puppeteer = require("puppeteer");
-const URL =process.env.URL
-let download_movie = async (fname, fsip) => {
+
+let download_movie = async (fname, fsip,url) => {
   
   const browser = await puppeteer.launch({
     headless: true,
@@ -22,7 +22,7 @@ let download_movie = async (fname, fsip) => {
     };
     interceptedRequest.continue(data);
   });
-  await page.goto(URL +"start-downloading",{waitUntil:'domcontentloaded'});
+  await page.goto(url +"start-downloading",{waitUntil:'domcontentloaded'});
 
   var results = [];
   

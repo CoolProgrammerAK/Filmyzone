@@ -1,12 +1,12 @@
 const puppeteer=require("puppeteer");
-const URL =process.env.URL
 
-let search_movie = async (val) => {
+
+let search_movie = async (val,url) => {
     const browser = await puppeteer.launch({ headless: true,
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
 
-    await page.goto(`${URL}?s=${val}`,{waitUntil:'domcontentloaded'});
+    await page.goto(`${url}?s=${val}`,{waitUntil:'domcontentloaded'});
     var results=[]
     results = results.concat(await extractedEvaluateCall(page));
             browser.close();

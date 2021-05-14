@@ -1,13 +1,13 @@
 const puppeteer=require("puppeteer")
-const URL =process.env.URL
 
-let get_details = async (val) => {
+
+let get_details = async (val,url) => {
     
     const browser = await puppeteer.launch({ headless: true,
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
  
-    await page.goto(URL+val,{waitUntil:'domcontentloaded'});
+    await page.goto(url+val,{waitUntil:'domcontentloaded'});
     var results = []
     results = results.concat(await extractedEvaluateCall(page));
      
