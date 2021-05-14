@@ -12,10 +12,11 @@ router.get("/latest/:page",async(req,res)=>{
    
      try {
           var result=await page(req.params.page,url)
+          
           res.json({result})
      } catch (error) {
           
-          res.status(500).json({error:"Something went wrong"})
+          res.status(500).json({error:url})
      }
 
 
@@ -23,7 +24,7 @@ router.get("/latest/:page",async(req,res)=>{
 
 router.get("/category/:category/page/:page",async(req,res)=>{
      try {
-          var result=await latest(req.params.category,req.params.page,url)
+          var result=await latest(url,req.params.category,req.params.page)
           res.json({result})
      } catch (error) {
           res.status(500).json({error:"Something went wrong"})
@@ -34,7 +35,7 @@ router.get("/category/:category/page/:page",async(req,res)=>{
 router.get("/search/q=:name",async(req,res)=>{
 
      try {
-          var result=await search_movie(req.params.name,req.params.page,url)
+          var result=await search_movie(req.params.name,url,req.params.page)
           res.json({result})
      } catch (error) {
           res.status(500).json({error:"Something went wrong"})

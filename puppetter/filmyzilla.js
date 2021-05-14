@@ -1,7 +1,7 @@
 const puppeteer=require("puppeteer");
 
 
-let latest = async (val="",pageno,url) => {
+let latest = async (url,val="",pageno) => {
     
     
     const browser = await puppeteer.launch({ headless: true,
