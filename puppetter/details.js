@@ -7,7 +7,7 @@ let get_details = async (val,url) => {
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
  
-    await page.goto("https://123mkv.kim/"+val,{waitUntil:'domcontentloaded'});
+    await page.goto(url+val,{waitUntil:'load',timeout:0});
     var results = []
     results = results.concat(await extractedEvaluateCall(page));
      
