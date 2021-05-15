@@ -13,13 +13,13 @@ node index.js
 ```
 ### Project Structure
  * **index.js** : Main project file, it has it initialize all the necessary files.
- * **lib/server.js**:  It has it's logic to create server http and https, routing system and the API services.
- * **lib/workers.js**: Contain background workers such as the one that make the health checks created by users or logging to files functions.
- * **lib/data.js** : Lib created in order to perform CRUD using the file system. Instead of using MongoDB, I store all of the data in a JSON file, which makes the project more straightforward to understand.
-  * **lib/log.js** : Lib created in order to perform log everything that happens in the API.
-  * **lib/handlers.js** : File containing all services used by the API.
-  * **lib/helpers.js** : Shared functions used across the API.
-  * **lib/config.js** : Configuration file for diferent environments such as production or development.
+ * **router/router.js**:  It has it's logic to create routing system and the API services.
+ * **puppetter/page.js**: Contain puppetter function to return latest movie collection(page wise) 
+ * **puppetter/details.js** :Contain puppetter function to return move description upon movie url entered
+  * **puppetter/download.js** : Contain puppetter function to screenshots and movie downloading link.
+  * **puppetter/search.js** : Contain puppetter function to return movie that the user will search
+  * **puppetter/filmyzilla.js** : Contain puppetter function to return category wise movie collection(page wise).
+  * **ProcFile** : Configuration file for heroku.
  
 ### Endpoints 
  - **/ping/** : 
