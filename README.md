@@ -79,8 +79,7 @@ Return a 200 status code showing all the latest movies depending upon the page n
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `category` | required | string  | Display all the movies whch fall under the entered category <br/><br/> Supported values: `hindi-movies` or `old-movies`.      
-   |
-|     `page` | required | number | Display all the movies whch fall under the entered category on the entered page number <br/><br/> Supported values: `1` or `2`.              |
+   |     `page` | required | number | Display all the movies whch fall under the entered category on the entered page number <br/><br/> Supported values: `1` or `2`.           |
 
                                                                    
 
