@@ -1,6 +1,7 @@
 # Filmyzone API - Node.js
-Filmyzone API using plain node.js.
+Filmyzone API using node.js and puppetter.[API](https://moviezonal-api-download.herokuapp.com/)
 
+This api is built using web scraping from one of the movie sites.
 ## About the project
 This project is entirely made for entertainment purposes. We can download any  movies , series by first viewing their desciption,video quality or viewing their screenshots
 
@@ -20,63 +21,32 @@ node index.js
   * **puppetter/search.js** : Contain puppetter function to return movie that the user will search
   * **puppetter/filmyzilla.js** : Contain puppetter function to return category wise movie collection(page wise).
   * **ProcFile** : Configuration file for heroku.
- 
-### Endpoints 
- - **/ping/** : 
+### API Endpoints 
+     These endpoints allow you to handle multiple request.
+ - **/latest/:page** : 
     - Methods: **GET**
-    - Description: Return a 200 status code showing that the API still alive.
-    - Query Strings: none
+      - Description: Return a 200 status code showing all the latest movies depending upon the page number entered in url.
+      - Params: page
 
- - **/users/** : 
-    - Method: **POST**
-      - Description: Create a new user.
-      - Body: first_name, last_name, phone, password, tos_agreement
+  - **/category/:category/page/:page** : 
+    - Methods: **GET**
+      - Description: Return a 200 status code showing all the movies which fall in the entered category in url depending upon the page number entered in url.
+      - Params: category and page
 
-    - Method: **GET**
-      - Description: Return a user data.
-      - Query String: phone
-
-    - Method: **UPDATE**
-      - Description: Update the user's fields.
-      - Body: first_name, last_name, password
-
-    - Method: **DELETE**
-      - Description: Delete a given user.
-      - Query String: phone
-
- - **/tokens/** : 
-    - Method: **POST**
-      - Description: Create a new authentication token for a given user.
-      - Body: phone, password
-      
-    - Method: **GET**
-      - Description: Return a token
-      - Query String: id
-
-    - Method: **UPDATE**
-      - Description: Update the token expiration time to extend one more hour.
-      - Body: id, extend
-
-    - Method: **DELETE**
-      - Description: Delete a given token.
-      - Query String: id
+ - **/search/q=:name** : 
+    - Methods: **GET**
+      - Description: Return a 200 status code showing all the movies which matched with the name entered in url.
+      - Params: name
  
- - **/checks/** : 
-    - Method: **POST**
-      - Description: Create a new API check.
-      - Body: protocol, url, method, success_codes, timeout_seconds
+ - **/movie-description** : 
+    - Methods: **POST**
+      - Description: Return a 200 status code showing all the details of the movie requested by the user.
+      - Params: none
       
-    - Method: **GET**
-      - Description: Return a existing check
-      - Query String: id
-
-    - Method: **UPDATE**
-      - Description: Update a check configuration
-      - Body: id, protocol, url, method, success_codes, timeout_seconds
-
-    - Method: **DELETE**
-      - Description: Delete a existing check.
-      - Query String: id
+  - **/download** : 
+    - Methods: **POST**
+      - Description: Return a 200 status code showing screenshots and downloading link of the movie .
+      - Params: name
 
 
 
