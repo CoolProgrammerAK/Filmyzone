@@ -207,7 +207,6 @@ ___
 |          Name | Required |  Type   | Description                                                                                                                                                         |
 | -------------:|:--------:|:-------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `fname` | required | string  | Required movie fname from above movie-desrciption post request <br/><br/>   
- |
 |    `fsip` | required | string  | Required movie fsip from above movie-desrciption post request <br/><br/>               |
     
 
