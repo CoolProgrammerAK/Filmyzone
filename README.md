@@ -41,8 +41,8 @@ Return a 200 status code showing all the latest movies depending upon the page n
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `page` | required | number  | Display all the latest movies on the entered page number <br/><br/> Supported values: `1` or `2`.                                                                     |
-                                                                   |
+|     `page` | required | number  | Display all the latest movies on the entered page number <br/><br/> Supported values: `1` or `2`.                                                                     
+                                                                   
 
 **Response**
 
@@ -79,9 +79,9 @@ Return a 200 status code showing all the latest movies depending upon the page n
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `category` | required | string  | Display all the movies whch fall under the entered category <br/><br/> Supported values: `hindi-movies` or `old-movies`.      
-| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|
 |     `page` | required | number | Display all the movies whch fall under the entered category on the entered page number <br/><br/> Supported values: `1` or `2`.  
-                                                                   |
+                                                                   
 
 **Response**
 
@@ -116,8 +116,8 @@ Return a 200 status code showing all the movies which matched with the name ente
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `name` | required | string  | Display all the movies which matched with the name entered in url. <br/><br/> Supported values: `radhe` or `extraction`.                                                                     |
-                                                                   |
+|     `name` | required | string  | Display all the movies which matched with the name entered in url. <br/><br/> Supported values: `radhe` or `extraction`.                                                                     
+                                                                   
 
 **Response**
 
@@ -146,7 +146,7 @@ Return a 200 status code showing all the details of the movie requested by the u
 
 |          Name | Required |  Type   | Description                                                                                                                                                         |
 | -------------:|:--------:|:-------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `link` | required | string  | Required movie url from above get request <br/><br/> Supported values: `2019-movies/skyfire-full-movie-download-free-hindi-dubbed-hd/` or `2003-movies/x2-x-men-united-full-movie-download-free-dual-audio-hd`.                      |
+|     `link` | required | string  | Required movie url from above get request <br/><br/> Supported values: `2019-movies/skyfire-full-movie-download-free-hindi-dubbed-hd/` or `2003-movies/x2-x-men-united-full-movie-download-free-dual-audio-hd`.                      
 
 **Response**
 
@@ -208,7 +208,7 @@ ___
 | -------------:|:--------:|:-------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `fname` | required | string  | Required movie fname from above movie-desrciption post request <br/><br/>   
  |
-| -------------:|:--------:|:-------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 |     `fsip` | required | string  | Required movie fsip from above movie-desrciption post request <br/><br/> 
 
 **Response**
@@ -234,4 +234,4 @@ or
 }
 ```
 
-Hope you like it. Programmer from India
+# Hope you like it. Programmer from India
