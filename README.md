@@ -1,5 +1,5 @@
 # Filmyzone API - Node.js
-Filmyzone API using node.js and puppetter.[API](https://moviezonal-api-download.herokuapp.com/)
+Filmyzone API using node.js and puppetter [https://moviezonal-api-download.herokuapp.com/](https://moviezonal-api-download.herokuapp.com/)
 
 This api is built using web scraping from one of the movie sites.
 ## About the project
