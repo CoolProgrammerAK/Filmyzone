@@ -1,0 +1,10 @@
+#main-container{
+  width: 1170px;
+padding: .23rem;
+  margin: 0 auto;
+  clear: both; position: relative;
+  display: block;
+  padding: 0;
+  max-width: 96%;
+  
+}

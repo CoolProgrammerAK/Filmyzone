@@ -1,0 +1,71 @@
+#blur2{
+   
+   font-size: 19.63px;
+color: white;
+font-family:Arial, Helvetica, sans-serif;
+}
+#blur{
+  color: whitesmoke;
+  text-align: center;
+  font-size: 22px;
+  background-color: rgb(8, 113, 184);
+  
+
+}
+#blur:hover{
+  background-color: rgb(184, 8, 8);
+}
+#display{
+  width: 100%;
+  justify-content: center;
+}
+#hea{
+display: none;
+}
+@media only screen and (max-width:991.5px){
+  #hea{
+    display:block;
+    }
+}
+
+#bigHead{
+  font-size: 45px;
+  font-family: 'Lobster', cursive;
+  color: white;
+  flex-grow: 1;
+}
+@media only screen and (max-width:565.5px){
+  #bigHead{
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+    color: white;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+.CCCC:hover{
+  background-color: rgb(184, 8, 8)!important;
+}
+
+button:focus{
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+}
+
+
+
+.navbar-nav{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+  
+}
+@media only screen and (max-width:712px){
+  .navbar-nav{
+    display: grid !important;
+    grid-template-columns: none !important;
+    
+  }
+}

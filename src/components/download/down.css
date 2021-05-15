@@ -1,0 +1,35 @@
+#downHead{
+    color: white;
+    font-family: cursive;
+}
+#indicate{
+    color: red;
+    font-size: 18px;
+    margin: 4px;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+#para{
+    color: rgb(228, 228, 228);
+    font-size: 18px;
+    margin: 4px;
+    font-weight: bold;
+}
+#downhead{
+    color: rgb(255, 255, 255);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+#bigindicate{
+    color: rgb(228, 21, 21);
+    font-size: 28px;
+    font-family: 'Hind';
+    margin-top: 6px;
+}
+#bigpara{
+    color: white;
+    font-size: 25px;
+    font-family: 'Hind';
+
+}

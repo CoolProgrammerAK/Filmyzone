@@ -1,0 +1,34 @@
+/* #asa{
+    grid-template-columns: 184px 191px;
+} */
+.bigg{
+    font-size: 28px;
+}
+/* .small{
+    font-size: 20px;
+} */
+@media only screen and (max-width:478px) {
+    .bigg{
+        font-size: 24px;
+    }
+    /* .small{
+        font-size: 18px;
+    } */
+    
+
+}
+
+ /* @media only screen and  (max-width:412px)  {
+    .bigg{
+        font-size: 20px;
+        margin: 0;
+        padding: 0 !important; 
+     }
+    /* .small{
+        font-size: 17px;
+     
+        padding-top: 1px !important;
+    } */
+
+
+

@@ -1,0 +1,8 @@
+#body{
+    background-color: rgba(37, 36, 36, 0.277);
+    height: 80px;
+    display:flex;
+    align-items:center;
+   
+    width: 100%;
+}

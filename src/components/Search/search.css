@@ -1,0 +1,29 @@
+
+#search{
+    width: 60%;
+}
+
+@media only screen and (max-width:778px) {
+    #search{
+        width: 100%;
+        min-width: fit-content;
+    }
+} 
+input.form-control::-webkit-input-placeholder {
+    color: rgb(204, 198, 198);
+  }
+input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#flexEnd{
+    justify-content: flex-end;
+}
+@media only screen and (max-width:853.5px){
+    #flexEnd{
+        justify-content: center;
+    }
+  }

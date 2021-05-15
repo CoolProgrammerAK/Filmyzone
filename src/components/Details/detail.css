@@ -1,0 +1,161 @@
+
+#divide{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.8rem;  
+}
+@media only screen and (max-width:767.5px) {
+    #alignC{
+       text-align: center;
+    }
+   
+
+}
+
+@media only screen and (max-width:478px) {
+    #heading{
+        font-size: 20px!important;
+    }
+    /* .small{
+        font-size: 18px;
+    } */
+    
+
+}
+
+#text{
+    color: white; font-weight: 600; font-size: 22px 
+}
+#small{
+   color: red;font-size: 22px;
+}
+#box{
+   background-color:#928e8e8e;
+   height:50px;
+padding: 6px 12px 4px 15px
+}
+#box_head{
+    font-weight: 500;
+    color: white;
+    font-size: 130%;
+}
+#box_main{
+    font-weight: 300;
+    color: white;
+    font-size: 117%;
+    letter-spacing: .3px;
+}
+
+.carousel-inner{
+    width: 80%!important;
+    margin: auto!important;
+}
+
+
+#head{
+    color: rgb(245, 245, 245);
+}
+#head2{
+    color: rgb(248, 244, 244);
+}
+
+
+#boxContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+#boxHeader{
+    height:25%;
+    font-size: 18px;
+    padding: 5px;
+    color: rgb(247, 241, 241);
+    font-weight: 400;
+    background-color: rgba(146, 143, 143, 0.74);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+  
+}
+
+#bgC{
+    background-color: rgb(209, 209, 209);
+    font-size: 16px;
+
+}
+#color{
+    color: white;
+    text-decoration: none;
+}
+#colorB{
+    color: black;
+    text-decoration: none;
+}
+#bgC:hover{
+    background-color: rgb(194, 194, 194);
+    font-size: 16px;
+
+}
+
+
+#data{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+#data2{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+#movieinfo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    color: #28abc2;
+    margin: 12px!important;
+    
+
+}
+
+#lang{
+    color: antiquewhite;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+#hind{
+    color: rgb(250, 25, 25);
+    font-size: 16px;
+}
+#margin{
+    margin-bottom: 8px;
+}
+
+#outborder{
+    box-shadow: 0 0 8px 0.175pc #999;
+}
+#inborder{
+    box-shadow: 0 0.125pc 0.3125pc 1px rgba(255,255,255,.6);
+}
+#dwnload{
+    color: white;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#bg{
+    background: #1488CC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+}
+
+#ftr{
+    color: rgb(184, 173, 173);
+    margin-bottom: 1px;
+}
