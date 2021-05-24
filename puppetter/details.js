@@ -57,7 +57,7 @@ let get_details = async (val,url) => {
           for (let article of articles) {
               let article_photo=article.children[0].children[0].children[0].src
               let article_text=article.children[1].innerText
-              let article_link=article.children[1].children[0].children[0].href.slice(19,)
+              let article_link=article.children[1].children[0].children[0].href.slice(20,)
               related.push({article_text,article_photo,article_link})
 
           }

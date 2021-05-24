@@ -27,7 +27,7 @@ let page = async (val,url) => {
         data.push({pageno})
         for (element of elements){
             let title=element.children[1].children[0].innerText
-            let link=element.children[1].children[0].children[0].href.slice(19,)
+            let link=element.children[1].children[0].children[0].href.slice(20,)
             let image=element.children[0].children[0].children[0].src
             data.push({title,link,image})
         }
