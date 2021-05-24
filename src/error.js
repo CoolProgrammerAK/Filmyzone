@@ -11,7 +11,7 @@ class error extends Component {
         <div id='notfound'>
         <div className='notfound'>
           <div className='notfound-404'>
-            <img id="imgerror" src={Npage?"404.svg":"/serverDown.svg"}></img>
+            <img id="imgerror" src={Npage?"/404.svg":"/serverDown.svg"}></img>
           </div>
           <p id="connect">{Npage?"Connection Lost":"Network Error"}</p>
           <p id="detail">{Npage?"Looks like the page you are looking to visit doesn't exist."
