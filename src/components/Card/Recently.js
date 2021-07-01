@@ -11,7 +11,7 @@ class Recently extends Component {
           className="text-light "
           style={{ borderRadius: 4, width: "100%",  }}
           variant="top"
-          srcSet={this.props.photo.includes("i1.wp.com")?this.props.photo:this.props.photo.split("//")[0]+ "//i1.wp.com/"+this.props.photo.split("//")[1]}
+          srcSet={this.props.photo}
         />
 
         <a href={`/movie/${link}`}  >

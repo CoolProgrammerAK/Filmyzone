@@ -158,20 +158,19 @@ document.title="Start Downloading"
                           <div>
                             <img
                               className="d-block w-100 mb-4"
-                              srcSet={this.state.data.ss1.includes("i1.wp.com")
-                              ?this.state.data.ss1:this.state.data.ss1.split("//")[0]+ "//i1.wp.com/"+this.state.data.ss1.split("//")[1]}
+                              srcSet={this.state.data.ss1}
                               alt="Third slide"
                             />
+                            {/* .includes("i1.wp.com") */}
+                              {/* ?this.state.data.ss1:this.state.data.ss1.split("//")[0]+ "//i1.wp.com/"+this.state.data.ss1.split("//")[1] */}
                             <img
                               className="d-block w-100 mb-4"
-                              srcSet={this.state.data.ss2.includes("i1.wp.com")
-                              ?this.state.data.ss2:this.state.data.ss2.split("//")[0]+ "//i1.wp.com/"+this.state.data.ss2.split("//")[1]}
+                              srcSet={this.state.data.ss2}
                               alt="Third slide"
                             />
                             <img
                               className="d-block w-100 mb-3"
-                              srcSet={this.state.data.ss3.includes("i1.wp.com")
-                              ?this.state.data.ss3:this.state.data.ss3.split("//")[0]+ "//i1.wp.com/"+this.state.data.ss3.split("//")[1]}
+                              srcSet={this.state.data.ss3}
                               alt="Third slide"
                             />
                           </div>
