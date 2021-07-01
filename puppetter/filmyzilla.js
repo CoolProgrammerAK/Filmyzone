@@ -8,9 +8,9 @@ let latest = async (url,val="",pageno) => {
         args: ['--no-sandbox','--disable-setuid-sandbox']});
     const page = await browser.newPage();
 
-    await page.goto(val==""?url:`${url}category/${val}/page/${pageno}`,{waitUntil:'domcontentloaded'});
+    await page.goto(val==""?url:`${url}/${val}/page/${pageno}`,{waitUntil:'domcontentloaded'});
     var results = [];
-  
+
     results = results.concat(await extractedEvaluateCall(page))
 
             browser.close();
