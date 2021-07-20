@@ -35,15 +35,15 @@ let get_details = async (val,url) => {
             let time=element.children[1].children[0].children[0].children[2].innerText
             let desc=element.children[1].children[0].children[1].children[2].children[0].innerText
             let title=element.children[1].children[0].children[1].children[2].children[2].innerText
-            let photo=element.children[1].children[0].children[1].children[2].children[3].children[0].srcset
-            let language=element.children[1].children[0].children[1].children[2].children[4].innerText.replace('Language: ',"")
-            let size=element.children[1].children[0].children[1].children[2].children[5].innerText.replace('Size: ',"")
-            let quality=element.children[1].children[0].children[1].children[2].children[6].innerText.replace('Quality: ',"")
-            let genre=element.children[1].children[0].children[1].children[2].children[7].innerText.split(":")[1]
-            let country=element.children[1].children[0].children[1].children[2].children[8].innerText.replace('Country: ',"")
-            let actors=element.children[1].children[0].children[1].children[2].children[9].innerText.replace('Actors: ',"")
-            let coming_soon=element.children[1].children[0].children[1].children[2].children[11].innerText
-            let download_title=element.children[1].children[0].children[1].children[2].children[10].innerText
+            let photo=element.children[1].children[0].children[1].children[2].children[2].children[0].srcset
+            let language=element.children[1].children[0].children[1].children[2].children[3].innerText.replace('Language: ',"")
+            let size=element.children[1].children[0].children[1].children[2].children[4].innerText.replace('Size: ',"")
+            let quality=element.children[1].children[0].children[1].children[2].children[5].innerText.replace('Quality: ',"")
+            let genre=element.children[1].children[0].children[1].children[2].children[6].innerText.split(":")[1]
+            let country=element.children[1].children[0].children[1].children[2].children[7].innerText.replace('Country: ',"")
+            let actors=element.children[1].children[0].children[1].children[2].children[8].innerText.replace('Actors: ',"")
+            let coming_soon=element.children[1].children[0].children[1].children[2].children[10].innerText
+            let download_title=element.children[1].children[0].children[1].children[2].children[9].innerText
         
              fname=document.querySelector('form[method=post]').children[0].value
 
@@ -51,9 +51,9 @@ let get_details = async (val,url) => {
           
        
 
-            let review_default=element.children[1].children[0].children[1].children[2].children[12].innerText
-            let review_heading=element.children[1].children[0].children[1].children[2].children[13].innerText
-            let review_details=element.children[1].children[0].children[1].children[2].children[14].innerText
+            let review_default=element.children[1].children[0].children[1].children[2].children[11].innerText
+            let review_heading=element.children[1].children[0].children[1].children[2].children[12].innerText
+            let review_details=element.children[1].children[0].children[1].children[2].children[13].innerText
           for (let article of articles) {
               let article_photo=article.children[0].children[0].children[0].srcset
               let article_text=article.children[1].innerText
