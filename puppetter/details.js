@@ -25,7 +25,6 @@ let get_details = async (val,url) => {
         let data = []
         let related=[]
         let fname=""
-
         let fsip=""
         let element=document.querySelector("#content_box")
         let articles=document.querySelectorAll("#content_box .post .related-posts .clear article")

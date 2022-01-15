@@ -1,7 +1,5 @@
 const puppeteer=require("puppeteer");
 
-
-
 let page = async (val,url) => {
     
     const browser = await puppeteer.launch({ headless: true,

@@ -7,15 +7,11 @@ const page = require("../puppetter/page")
 const search_movie = require("../puppetter/search")
 const router=express.Router()
 var url=process.env.MOVIEURL
-
 router.get("/latest/:page",async(req,res)=>{
-   
      try {
           var result=await page(req.params.page,url)
-          
-         return res.json({result})
-     } catch (error) {
-          
+          return res.json({result})
+     } catch (error) {   
         return  res.status(500).json({error:"Something went wrong"})
      }
 

@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 
 let download_movie = async (fname, fsip, url) => {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: true, acceptInsecureCerts: true, 
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     ignoreHTTPSErrors: true,
   });
@@ -36,13 +36,13 @@ async function extractedEvaluateCall(page) {
     let elements = document.querySelector("#content_box");
 
     let ss1 =
-      elements.children[1].children[0].children[1].children[9].children[0].src
+      elements.children[1].children[0].children[1].children[12].children[0].src
     let ss2 =
-      elements.children[1].children[0].children[1].children[10].children[0].src
+      elements.children[1].children[0].children[1].children[13].children[0].src
     let ss3 =
-      elements.children[1].children[0].children[1].children[11].children[0].src;
+      elements.children[1].children[0].children[1].children[14].children[0].src;
     let link =
-      elements.children[1].children[0].children[1].children[3].children[0].href
+      elements.children[1].children[0].children[1].children[4].children[0].href
 
     data.push({ ss1, ss2, ss3, link });
     return data;
