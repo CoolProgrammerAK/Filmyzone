@@ -14,8 +14,6 @@ router.get("/latest/:page",async(req,res)=>{
      } catch (error) {   
         return  res.status(500).json({error:"Something went wrong"})
      }
-
-
 })
 
 router.get("/category/:category/page/:page",async(req,res)=>{
