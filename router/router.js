@@ -11,7 +11,7 @@ router.get("/latest/:page",async(req,res)=>{
           var result=await page(req.params.page)
           return res.json({result})
      } catch (error) {   
-        return  res.status(500).json({error:"Something went wrong"})
+        return  res.status(500).json({error:error})
      }
 })
 
