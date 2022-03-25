@@ -1,6 +1,6 @@
 const puppeteer=require("puppeteer");
 
-let page = async (val,url) => {
+let page = async (val,url="https://123mkv.media/") => {
     
     const browser = await puppeteer.launch({ headless: true,
         args: ['--no-sandbox','--disable-setuid-sandbox']});
