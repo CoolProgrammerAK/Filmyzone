@@ -8,7 +8,7 @@ const search_movie = require("../puppetter/search")
 const router=express.Router()
 router.get("/latest/:page",async(req,res)=>{
      try {
-          var result=await page(req.params.page,process.env.MOVIEURL)
+          var result=await page(req.params.page)
           return res.json({result})
      } catch (error) {   
         return  res.status(500).json({error:"Something went wrong"})
@@ -17,7 +17,7 @@ router.get("/latest/:page",async(req,res)=>{
 
 router.get("/category/:category/page/:page",async(req,res)=>{
      try {
-          var result=await latest(process.env.MOVIEURL,req.params.category,req.params.page)
+          var result=await latest(req.params.category,req.params.page)
          return res.json({result})
      } catch (error) {
         return  res.status(500).json({error:"Something went wrong"})
@@ -28,7 +28,7 @@ router.get("/category/:category/page/:page",async(req,res)=>{
 router.get("/search/q=:name",async(req,res)=>{
 
      try {
-          var result=await search_movie(req.params.name,process.env.MOVIEURL,req.params.page)
+          var result=await search_movie(req.params.name,req.params.page)
          return res.json({result})
      } catch (error) {
          return res.status(500).json({error:"Something went wrong"})
@@ -37,7 +37,7 @@ router.get("/search/q=:name",async(req,res)=>{
 
 router.post("/movie-description",async(req,res)=>{
      try {
-          var result=await get_details(req.body.link,process.env.MOVIEURL)
+          var result=await get_details(req.body.link)
          return res.json({result})
      } catch (error) {
         return  res.status(500).json({error:"Something went wrong"})
@@ -47,7 +47,7 @@ router.post("/movie-description",async(req,res)=>{
 router.post("/download",async(req,res)=>{
      try {
   
-          var result=await download_movie(req.body.fname,req.body.fsip,process.env.MOVIEURL)
+          var result=await download_movie(req.body.fname,req.body.fsip)
         return  res.json({result})
      } catch (error) {
         return  res.status(500).json({error:"Something went wrong"})
