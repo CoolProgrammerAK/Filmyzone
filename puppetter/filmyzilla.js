@@ -1,7 +1,7 @@
 const puppeteer=require("puppeteer");
 
 
-let latest = async (url="https://123mkv.media/",val="",pageno) => {
+let latest = async (url,val="",pageno) => {
     
     
     const browser = await puppeteer.launch({ headless: true,

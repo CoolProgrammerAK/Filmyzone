@@ -1,6 +1,6 @@
 const puppeteer=require("puppeteer");
 
-let page = async (val,url="https://123mkv.media/") => {
+let page = async (val,url) => {
     
     const browser = await puppeteer.launch({ headless: true,
         args: ['--no-sandbox','--disable-setuid-sandbox']});
@@ -10,7 +10,6 @@ let page = async (val,url="https://123mkv.media/") => {
     var results = [];
   
     results = results.concat(await extractedEvaluateCall(page));
-    
             browser.close();
             return results;
     }
