@@ -6,7 +6,7 @@ const latest = require("../puppetter/filmyzilla")
 const page = require("../puppetter/page")
 const search_movie = require("../puppetter/search")
 const router=express.Router()
-var url=process.env.MOVIEURL || "https://123mkv.ltd"
+var url=process.env.MOVIEURL 
 router.get("/latest/:page",async(req,res)=>{
      try {
           var result=await page(req.params.page,url)
