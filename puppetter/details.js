@@ -10,10 +10,6 @@ let get_details = async (val,url) => {
     await page.goto(url+val,{waitUntil:'domcontentloaded'});
     var results = []
     results = results.concat(await extractedEvaluateCall(page));
-     
-        
-    
-    
             browser.close();
             return results;
     }
