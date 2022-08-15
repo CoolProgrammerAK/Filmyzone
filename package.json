@@ -13,6 +13,7 @@
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "form-data": "^3.0.0",
-    "puppeteer": "^5.4.0"
+    "nodemon": "^2.0.19",
+    "puppeteer": "^5.5.0"
   }
 }
