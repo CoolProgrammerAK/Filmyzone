@@ -7,7 +7,7 @@ let get_details = async (val, url) => {
   });
   const page = await browser.newPage();
 
-  await page.goto(url + val, {
+  await page.goto("https://123mkv.pics/" + val, {
     waitUntil: "domcontentloaded",
   });
   var results = [];
@@ -127,9 +127,9 @@ async function extractedEvaluateCall(page) {
         fsip,
         download_title,
         coming_soon,
-        // review_default,
-        // review_heading,
-        // review_details,
+        review_default,
+        review_heading,
+        review_details,
         download_link,
       },
       related_post: { related },

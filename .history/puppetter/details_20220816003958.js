@@ -7,7 +7,7 @@ let get_details = async (val, url) => {
   });
   const page = await browser.newPage();
 
-  await page.goto(url + val, {
+  await page.goto("https://123mkv.pics/" + val, {
     waitUntil: "domcontentloaded",
   });
   var results = [];
@@ -85,21 +85,26 @@ async function extractedEvaluateCall(page) {
     download_link = document.querySelector(".ondl")?.children[0].href;
     fsip = document.querySelector("form[method=post]")?.children[1].value;
 
-  //   let review_default, review_heading, review_details;
+    let review_default, review_heading, review_details;
      
-  //   {
-  // if (download_link=="" && fname!="" && fsip!="" ) {
-  //       review_default = element.children[0]?.children[0].children[1].children[2].children[11].innerText;
-  //       review_heading = element.children[0]?.children[0].children[1].children[2].children[12].innerText;
-  //       review_details = element.children[0]?.children[0].children[1].children[2].children[12].innerText;
-  //     } 
-  //     else if (download_link!="" ) {
-  //       review_default = element.children[0]?.children[0].children[1].children[2].children[11].innerText;
-  //       review_heading = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
-  //       review_details = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
-  //     } 
+    {
+       if(coming_soon !=""){
+        review_default = element.children[0]?.children[0].children[1].children[2].children[10].innerText;
+        review_heading = element.children[0]?.children[0].children[1].children[2].children[13].innerText;
+        review_details = element.children[0]?.children[0].children[1].children[2].children[13].innerText;
+      }
+      else if (download_link=="" && fname!="" ) {
+        review_default = element.children[0]?.children[0].children[1].children[2].children[11].innerText;
+        review_heading = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
+        review_details = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
+      } 
+      else if (download_link!="" ) {
+        review_default = element.children[0]?.children[0].children[1].children[2].children[11].innerText;
+        review_heading = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
+        review_details = element.children[0]?.children[0].children[1].children[2].children[15].innerText;
+      } 
      
-  //   }
+    }
    
       
     for (let article of articles) {
@@ -127,9 +132,9 @@ async function extractedEvaluateCall(page) {
         fsip,
         download_title,
         coming_soon,
-        // review_default,
-        // review_heading,
-        // review_details,
+        review_default,
+        review_heading,
+        review_details,
         download_link,
       },
       related_post: { related },

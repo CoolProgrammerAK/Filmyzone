@@ -7,7 +7,7 @@ let get_details = async (val, url) => {
   });
   const page = await browser.newPage();
 
-  await page.goto(url + val, {
+  await page.goto("https://123mkv.pics/" + val, {
     waitUntil: "domcontentloaded",
   });
   var results = [];

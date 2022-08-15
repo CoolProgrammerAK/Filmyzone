@@ -21,7 +21,7 @@ let download_movie = async (fname, fsip, url) => {
     };
     interceptedRequest.continue(data);
   });
-  await page.goto(url + "start-downloading", { waitUntil: "domcontentloaded" });
+  await page.goto("" + "start-downloading", { waitUntil: "domcontentloaded" });
 
   var results = [];
 
