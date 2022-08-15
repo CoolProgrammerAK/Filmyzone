@@ -145,9 +145,12 @@ class Down extends Component {
                           {" "}
                           Your downloading will start in few seconds. If not{" "}
                           <a
-                         
                             style={{ textDecoration: "underline" }}
-                            href={this.state.data.gdrive}  target="_blank" 
+                            onClick={() =>
+                              showtoast("Downloading started", true)
+                            }
+                            href={this.state.data.gdrive}
+                            download
                           >
                             Click here
                           </a>

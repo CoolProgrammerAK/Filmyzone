@@ -145,9 +145,11 @@ class Down extends Component {
                           {" "}
                           Your downloading will start in few seconds. If not{" "}
                           <a
-                         
+                          target="blank"
                             style={{ textDecoration: "underline" }}
-                            href={this.state.data.gdrive}  target="_blank" 
+                            href={this.state.data.gdrive}
+
+                            download
                           >
                             Click here
                           </a>

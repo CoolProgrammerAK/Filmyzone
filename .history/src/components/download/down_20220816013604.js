@@ -147,7 +147,7 @@ class Down extends Component {
                           <a
                          
                             style={{ textDecoration: "underline" }}
-                            href={this.state.data.gdrive}  target="_blank" 
+                            href={this.state.data.gdrive}  target="blank" 
                           >
                             Click here
                           </a>

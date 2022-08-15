@@ -120,18 +120,17 @@ class Down extends Component {
                         to download movie
                       </span>
                     </p>
-                    {/* <p>
+                    <p>
                       <span id="indicate" className="mt-3">
                         {" "}
                         <a
-                        id="indicate"
                           style={{ textDecoration: "underline" }}
                           href={this.state.data.gdrive}
                         >
                           Google Drive link
                         </a>{" "}
                       </span>
-                    </p> */}
+                    </p>
 
                     <p className="mt-3">
                       <span id="indicate">
@@ -145,9 +144,12 @@ class Down extends Component {
                           {" "}
                           Your downloading will start in few seconds. If not{" "}
                           <a
-                         
                             style={{ textDecoration: "underline" }}
-                            href={this.state.data.gdrive}  target="_blank" 
+                            onClick={() =>
+                              showtoast("Downloading started", true)
+                            }
+                            href={this.state.data.link}
+                            download
                           >
                             Click here
                           </a>
