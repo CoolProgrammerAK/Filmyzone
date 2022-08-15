@@ -137,21 +137,13 @@ class SideCard extends Component {
               className="px-3"
               style={{ marginTop: 15, marginBottom: 15 }}
             >
-              <Link id="color" to={`/category/2022-movies`}>
-                <Button
-                  variant="info"
-                  block
-                >
-                  2022
-                </Button>
-              </Link>
                <Link id="color" to={`/category/2021-movies`}>
                 <Button variant="info" block>
                   2021
                 </Button>
               </Link>
               <Link id="color" to={`/category/2020-movies`}>
-                <Button variant="info" block style={{ marginTop: ".5rem" }}>
+                <Button variant="info" block>
                   2020
                 </Button>
               </Link>

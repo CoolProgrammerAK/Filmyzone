@@ -220,23 +220,14 @@ class Detail extends Component {
                         </h3>
                       </div>
                       {!this.state.description.heading.includes("Coming") ? (
-                        this.state.description.fsip ? (
-                          <a
-                            href={`/download/${this.state.description.fsip}/${this.state.description.fname}`}
-                            target="blank"
-                          >
-                            {" "}
-                            <img src="/download.png"></img>
-                          </a>
-                        ) : (
-                          <a
-                            href={`${this.state.description.download_link}`}
-                            target="blank"
-                          >
-                            {" "}
-                            <img src="/download.png"></img>
-                          </a>
-                        )
+                        
+                        <a
+                          href={`/download/${this.state.description.fsip}/${this.state.description.fname}`}
+                          target="blank"
+                        >
+                          {" "}
+                          <img src="/download.png"></img>
+                        </a>
                       ) : (
                         <>
                           <p

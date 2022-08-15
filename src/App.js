@@ -22,9 +22,6 @@ componentDidMount(){
   render() {
     return (<>
       <div id="main-container" >
-        
-     
-        
         <NavBar></NavBar>
         <BrowserRouter>
         <Switch>

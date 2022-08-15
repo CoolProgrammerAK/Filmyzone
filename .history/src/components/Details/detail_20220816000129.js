@@ -230,7 +230,7 @@ class Detail extends Component {
                           </a>
                         ) : (
                           <a
-                            href={`${this.state.description.download_link}`}
+                            href={`${this.state.}`}
                             target="blank"
                           >
                             {" "}

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SideCard from "../sideCard";
-import Error from "../../error";
+import Error from '../../error'
 import "./detail.css";
-import Loading from "../Loading/loading";
+import Loading from '../Loading/loading'
 import Card from "../Card/Recently";
 class Detail extends Component {
   constructor(props) {
@@ -11,9 +11,8 @@ class Detail extends Component {
 
     this.state = {
       related: [],
-      description: [],
-      loading: true,
-      error: false,
+      description: [],loading:true,error:false
+     
     };
   }
 
@@ -29,45 +28,49 @@ class Detail extends Component {
     })
       .then((res) => res.json())
       .then((datas) => {
-        if (datas.error) {
-          this.setState({ error: true, loading: false });
-        } else {
-          this.setState({
-            description: datas.result[0].single_post,
-            loading: false,
-          });
+        if(datas.error){
+          this.setState({error:true,loading:false})
+        }
+        else{
+
+          this.setState({ description: datas.result[0].single_post ,loading:false});
           this.setState({ related: datas.result[0].related_post.related });
         }
+      }).catch(err=>{
+        console.log(err.toString())
+
       })
-      .catch((err) => {
-        console.log(err.toString());
-      });
+     
   }
-  componentWillMount() {
-    document.title = "Movie Detail";
-  }
+  componentWillMount(){
+  
+    document.title="Movie Detail"
+    }
   render() {
-    if (this.state.error) {
-      return (
-        <>
-          <Error Npage={false}></Error>
-        </>
-      );
-    } else if (
-      this.state.description.heading &&
-      this.state.related.length &&
-      !this.state.loading
-    ) {
+   if(this.state.error){
+    return (
+      <>
+        <Error Npage={false}></Error>   
+      </>
+    
+    )
+   }
+
+    else if (this.state.description.heading && this.state.related.length && !this.state.loading ) {
       return (
         <>
           <Container className="mb-5 p-0 " fluid>
+            
             <Row style={{}}>
               <Col lg="8">
-                <Container fluid className="my-1" style={{ padding: 0 }}>
+                <Container fluid
+                  className="my-1"
+                  style={{ padding:0 }}
+                >
                   <div
                     style={{
                       backgroundColor: "rgba(146, 143, 143, 0.74)",
-                      height: "fit-content",
+                      height:'fit-content',
                     }}
                   >
                     <p style={{ fontSize: 17, padding: 2, paddingLeft: 8 }}>
@@ -79,10 +82,7 @@ class Detail extends Component {
                         id="head2"
                         style={{ fontWeight: "bold", fontSize: 19 }}
                       >
-                        {this.state.description.title.replace(
-                          "Full Movie Download",
-                          ""
-                        )}
+                        {this.state.description.title.replace("Full Movie Download","")}
                       </span>
                     </p>
                   </div>
@@ -91,8 +91,8 @@ class Detail extends Component {
                   fluid
                   className="mb-1"
                   style={{
-                    marginTop: "1.9rem",
-                    padding: 0,
+                   
+                    marginTop: "1.9rem",padding:0
                   }}
                 >
                   <h4
@@ -105,11 +105,12 @@ class Detail extends Component {
                       fontSize: 28,
                     }}
                   >
-                    {this.state.description.heading}
+                     {this.state.description.heading}
                   </h4>
                 </Container>
                 <div
                   style={{
+                   
                     marginTop: -11,
                   }}
                 >
@@ -132,7 +133,10 @@ class Detail extends Component {
                     </span>
                   </p>
                 </div>
-                <Container className="my-1" style={{}}>
+                <Container
+                  className="my-1"
+                  style={{ }}
+                >
                   <Row className="p-1 bg-light">
                     <Col md="5">
                       <div style={{ paddingTop: 15, paddingBottom: 15 }}>
@@ -144,12 +148,7 @@ class Detail extends Component {
                     </Col>
                     <Col style={{ padding: 20 }}>
                       <div>
-                        <h3>
-                          {this.state.description.title.replace(
-                            "Full Movie Download",
-                            ""
-                          )}
-                        </h3>
+                        <h3>{this.state.description.title.replace("Full Movie Download","")}</h3>
                         <img
                           className="my-1"
                           src="https://1.bp.blogspot.com/-14SHVhWuL8g/XqnULTVrboI/AAAAAAAAIcM/VH7vdvy0FhsvOQlUVj-7Db1-81n0SlNzACLcBGAsYHQ/s200/watch1080.png"
@@ -179,11 +178,7 @@ class Detail extends Component {
                   <div className="text-center">
                     <div
                       className="text-light mt-4 mb-3"
-                      style={{
-                        fontSize: 25,
-                        fontFamily: "Poppins",
-                        fontWeight: "bold",
-                      }}
+                      style={{ fontSize: 25, fontFamily: "Poppins",fontWeight:'bold'}}
                     >
                       {this.state.description.heading}
                     </div>
@@ -220,23 +215,10 @@ class Detail extends Component {
                         </h3>
                       </div>
                       {!this.state.description.heading.includes("Coming") ? (
-                        this.state.description.fsip ? (
-                          <a
-                            href={`/download/${this.state.description.fsip}/${this.state.description.fname}`}
-                            target="blank"
-                          >
-                            {" "}
-                            <img src="/download.png"></img>
-                          </a>
-                        ) : (
-                          <a
-                            href={`${this.state.description.download_link}`}
-                            target="blank"
-                          >
-                            {" "}
-                            <img src="/download.png"></img>
-                          </a>
-                        )
+                        <a href={`/download/${this.state.description.fsip}/${this.state.description.fname}`} target="blank">
+                          {" "}
+                          <img src="/download.png"></img>
+                        </a>
                       ) : (
                         <>
                           <p
@@ -257,7 +239,7 @@ class Detail extends Component {
                       )}
                     </div>
 
-                    {/* <div className="mt-4">
+                    <div className="mt-4">
                       <p id="movieinfo">Storyline</p>
                       <p
                         className="text-justify"
@@ -267,7 +249,8 @@ class Detail extends Component {
                           ? this.state.description.review_heading
                           : this.state.description.review_details}
                       </p>
-                    </div> */}
+                    </div>
+                   
                   </div>
                   <div>
                     <div
@@ -302,16 +285,15 @@ class Detail extends Component {
               </Col>
             </Row>
           </Container>
+         
         </>
       );
-    } else {
-      return (
-        <>
-          <Loading></Loading>{" "}
-        </>
-      );
+    }
+     else {
+      return <><Loading></Loading>    </>;
     }
   }
 }
 
 export default Detail;
+

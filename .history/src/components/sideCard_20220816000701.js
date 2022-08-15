@@ -141,6 +141,7 @@ class SideCard extends Component {
                 <Button
                   variant="info"
                   block
+                  style={{ marginTop: ".5rem" }}
                 >
                   2022
                 </Button>
@@ -151,7 +152,7 @@ class SideCard extends Component {
                 </Button>
               </Link>
               <Link id="color" to={`/category/2020-movies`}>
-                <Button variant="info" block style={{ marginTop: ".5rem" }}>
+                <Button variant="info" block>
                   2020
                 </Button>
               </Link>

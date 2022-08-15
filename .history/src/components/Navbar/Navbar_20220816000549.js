@@ -110,13 +110,13 @@ class NavBar extends Component {
                 variant="transparent"
                 id="blur2"
               >
-                <Dropdown.Item href="/category/2022-movies">
+                <Dropdown.Item href="/category/2021-movies">
                   2022 movies
                 </Dropdown.Item>
-                <Dropdown.Item href="/category/2021-movies">
+                <Dropdown.Item href="/category/2020-movies">
                   2021 movies
                 </Dropdown.Item>
-                <Dropdown.Item href="/category/2020-movies">
+                <Dropdown.Item href="/category/2019-movies">
                   2020 movies
                 </Dropdown.Item>
               </DropdownButton>

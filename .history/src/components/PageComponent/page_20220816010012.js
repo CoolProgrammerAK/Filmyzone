@@ -60,7 +60,7 @@ export function Page(props) {
       <Container fluid id="fit" className="mt-3">
         <Container fluid id="fit">
           <Header title={`Page ${props.match.params.id}`}></Header>
-          <Container fluid id={data.length > 4?"show":"show2"}>
+          <Container fluid id={data"show"}>
             {data &&
               data.map((i, index) => (
                 <Card
